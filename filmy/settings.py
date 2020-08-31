@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '045+27d%ix8scv*hm)tqhaxy$(11p7&8z%s8@3i9k3n9gf$jfv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1"]
 
 
 # Application definition
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'filmy.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["templatess"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
