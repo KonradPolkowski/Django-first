@@ -9,6 +9,17 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>tu beda moje filmy</h2>
+    {% if films|length == 3 %}
+        <h2>Brak filmów</h2>
+    {% else %}
+         <h2>ilosc filmow w BD: {{ films|length }}</h2>
+    {% endif %}
+
+    <h2>ilosc filmow w BD: {{ films|length }}</h2>
+    <!<h3>{{ text }}</h3>
+
+    {% for film in films %}
+        <p>{{ film.title }}</p>
+    {% endfor %}
 </body>
 </html>
