@@ -1,0 +1,28 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, user-scalable = no, initial-scale=1.0,
+maximum-scale=1.0, minimum-scale=1.0" <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'nowy.css' %}">
+</head>
+
+<body>
+    {% if filmy|length == 3 %}
+    <h2>Brak filmów</h2>
+    {% else %}
+    <h2>ilosc filmow w BD: {{ filmy|length }}</h2>
+    {% endif %}
+
+    <h2>ilosc filmow w BD: {{ filmy|length }}</h2>
+    <!<h3>{{ text }}</h3>
+
+        {% for film in filmy %}
+        <p>{{ film }}</p>
+        {% endfor %}
+</body>
+
+</html>
