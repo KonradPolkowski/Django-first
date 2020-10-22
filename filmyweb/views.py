@@ -9,3 +9,9 @@ def wszystkie_filmy(request):
     filmy = ["Avatar", "Titanic",  "godfaher"]
     wszystkie = Film.objects.all()
     return render(request, 'filmy.html', {'filmy': wszystkie, 'text': test})
+
+# CRUD
+# Create
+# Read all / get / filter
+# Update
+# Delete
