@@ -11,7 +11,8 @@ maximum-scale=1.0, minimum-scale=1.0" <meta http-equiv="X-UA-Compatible" content
 </head>
 
 <body>
-    {% if filmy|length == 3 %}
+    <a href="{% url 'nowy_film' %}">Dodaj Film</a>
+    {% if filmy|length > 3 %}
     <h2>Brak filmów</h2>
     {% else %}
     <h2>ilosc filmow w BD: {{ filmy|length }}</h2>
@@ -21,7 +22,10 @@ maximum-scale=1.0, minimum-scale=1.0" <meta http-equiv="X-UA-Compatible" content
     <!<h3>{{ text }}</h3>
 
         {% for film in filmy %}
-        <p>{{ film }}</p>
+        <h3>{{ film }}</h3>
+        <p>{{ film.description }}</p>
+        <a href="{% url 'edytuj_film' film.id %}">Edytuj</a>
+        <a href="{% url 'usun_film' film.id %}">Usun</a>
         {% endfor %}
 </body>
 
