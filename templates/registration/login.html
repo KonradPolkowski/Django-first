@@ -8,16 +8,15 @@
 </head>
 
 <body>
-    <h1>Czy napewno chcesz usunąć film pod tytulem"{{ film.title }}"?</h1>
-    <form method="post">
+    <form method="POST">
         {% csrf_token %}
-        <button type="submit">Usun Film</button>
+        {{form}}
+        <button type="submit">zaloguj</button>
     </form>
-    <a href="{% url 'wszystkie_filmy' %}">Cofnij</a>
 
-    
+    <hr>
 
-
+    <a href="{% url 'wszystkie_filmy' %}">Przejdz do Serwisu</a>
 </body>
 
 </html>

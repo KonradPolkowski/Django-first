@@ -11,6 +11,16 @@ maximum-scale=1.0, minimum-scale=1.0" <meta http-equiv="X-UA-Compatible" content
 </head>
 
 <body>
+    {% if user.is_authenticated %}
+    <h4>Witaj {{ user.username }}</h4>
+    <a href="{% url 'logout' %}">Logout</a>
+    {% else %}
+    <a href="{% url 'login' %}">Login</a>
+    {% endif %}
+
+    <hr>
+
+
     <a href="{% url 'nowy_film' %}">Dodaj Film</a>
     {% if filmy|length > 3 %}
     <h2>Brak filmów</h2>
